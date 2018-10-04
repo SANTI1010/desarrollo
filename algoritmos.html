@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algoritmos</title>
+</head>
+<body>
+
+  <h1>Introducción al DOM</h1>
+    <p>Puedes seleccionar el primer hijo de un nodo elemento, por ejemplo de body, de dos formas:</p>
+    <ul>
+      <li>document.body.firstChild</li>
+      <li>document.body.childNodes[0]</li>
+    </ul>
+
+
+
+
+
+
+
+	<script>
+
+
+		
+
+
+
+
+
+		/*** Ej 32  *********Cerca de 100***********
+			Encontrar un valor que sea el mas cercano a 100
+		*****/
+
+		/*function cerca (x,y){
+
+			var cien = 100 - x;
+			var cient = 100 - y;
+
+			if (cien<cient){
+				return x;
+			}else{
+				return y;
+			}
+
+		}
+
+		console.log("El numero mas cerca de cien es " + cerca(12,90));
+		*/	
+	
+
+		/***Ej 41  *** Retorno 40 o 20*********/
+		/*
+		function verificar (a,b,c){
+			if (a == b && b == c){
+				return 30;
+			}else if (a == b && b != c){
+				return 40;
+			}else {
+				return 20;
+			}
+		}
+		
+		console.log(verificar(8,88,81));
+		*/
+
+		/*****Ej 69 ******   Suma matriz, le paso por parametros en el console.log    *************/
+
+		/*function sumarMatriz(nums) {
+			return nums [0] + nums [1] + nums [2] ;
+
+		}
+
+		console.log(sumarMatriz([10,20,30]));
+		*/
+
+		/**** Ej 28     ************* Entre 50 y 99********************/	
+		/*function rango (numero1,numero2) {
+			if ((numero1>=50 && numero1<= 99)||(numero2>=50 && numero2<=99)){
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+	
+
+	console.log(rango(6,10));
+	console.log(rango(60,40));
+	console.log(rango(6,100));*/
+
+		/**Ej18******* 50 o 50**********/
+		/*function test (x,y){
+			return ((x==50 || y == 50)||(x+y==50));
+		}
+
+		console.log(test(20,50));
+		console.log(test(40,10));
+		console.log(test(20,30));
+		*/
+
+		/***Ej youtube**************Palindromo******************/
+/*
+		function esPalindromo (cadena){
+			t = cadena.length;
+			if (t == 0){
+				return false;
+			}
+			for (i=0;i<t/2;i++){
+				if(cadena[i]!= cadena[t-1-i]){
+					return false;
+				}
+			}
+			return true;
+		}
+
+		console.log(esPalindromo("oso"));
+
+*/
+		/**********************AJAX*********************/
+		//creo la peticion http
+		/*var req = new XMLHttpRequest();
+		//Peticion HTTP GET asincronica lo hago con el TRUE
+		req.open("GET", "http://localhost:3000/imagenes", true);
+		//envio la peticion
+		req.send(null);
+
+		console.log(req.responseText);*/
+
+
+	/*	
+		for(var i=1; i <=30;i+=4){  //en el ultimo es el incremento
+			document.write(i + "<br>");
+		}
+
+		for(var i = 1;i<=10;i++){  //tabla del 8
+			document.write("8" + "x" + i + "=" + 8*i + "<br>" );
+		}
+
+		for (var i=1;i<=100;i++){
+			if(i%2==0)
+			document.write(i+ " es par" + "<br>");
+
+			else {
+			document.write(i + " es impar" + "<br>")
+		}
+}
+		
+
+		for(h=1;h<=100;h++){
+			if(h%3==0 && h%5==0){
+				document.write("FizzBuzz" + "<br>");
+				}else if  (h%3==0){
+					document.write("Fizz" + "<br>");
+				}	
+				else if  (h%5==0){
+					document.write("Buzz" + "<br>");
+				}else{
+						document.write(h + "<br>");
+					}
+				
+			
+		}*/
+
+				/*********************SUMA****************
+		var suma= 0;
+
+		for(var i=1;i<=5;i++){
+			var numero= parseInt(prompt("Ingresa un numero"));
+			
+			(suma=suma+numero);
+			
+		}
+		document.write("La suma es " + suma);	*/
+
+		/*********************PARES****************
+		for(var i = 1;i<=10; i++){
+			
+			var digitar = parseInt(prompt("Ingresa un numero","NaN"));
+
+			if(i%2==0){
+				console.log(i);
+			}
+		}*/
+
+	/*	function decirHola (){
+			return "Hola cra";
+		}
+
+		var saludo = decirHola();
+
+		console.log(saludo); */
+
+
+/*
+		function nombreEdad (nombre,edad){
+			return "Hola mi nombre es " + nombre + " y mi edad es "+ edad;
+		}
+
+		var saludo = nombreEdad("Santiago",25);
+		console.log(saludo);
+*/
+
+/*var n = prompt("Ingresa tu nombre", "nombre");
+var a = prompt("Ingresa tu apellido", "apellido");
+
+function presentarte (nombre,apellido){
+	var mensaje = "Hola, " + n + " " + a;
+	return mensaje;
+}
+
+
+console.log(presentarte());*/
+/*
+function cuadrado(x){
+	return x * x ;
+
+}
+
+console.log(cuadrado(4));
+
+*/
+/*
+function min (uno,dos){
+	if (uno < dos){
+		return uno;
+	}else{
+		return dos;
+	}
+}
+
+console.log(min(10,2));
+console.log(min(1,2));
+console.log(min(4.5,5));*/
+
+/*var radio= prompt("Ingresa el radio","radio");
+
+function perimetro(santi){
+	return 2 * Math.PI * radio;
+}
+
+function area(radio){
+	return (radio*radio)*Math.PI;   //Math.pow devuelve el valor del numero radio a la potencia de 2 (radio*radio);
+}
+
+
+console.log(perimetro(radio));
+console.log(area(radio));*/
+
+
+
+//function area(){
+//	return
+//}
+
+/*var cuenta = {
+	titular:"Alex",
+	saldo: 0,
+
+	ingresar:function(cantidad){
+		console.log("Has ingresado "+ cantidad+ " euros");
+		return this.saldo += cantidad;
+	},
+
+	extraer:function(cantidad){
+		console.log("Has extraido "+ cantidad + " euros");
+		return this.saldo -= cantidad;
+	},
+
+	informar:function() {
+		return "Ek nombre del titular es: " + this.titular + " El saldo de la cuenta es " + this.saldo +" euros";
+	}
+}
+
+console.log(cuenta.titular);
+console.log(cuenta.saldo);
+console.log("-----------------");
+console.log(cuenta.ingresar(100));
+console.log(cuenta.extraer(50));
+console.log(cuenta.informar());*/
+
+
+/*
+var coche = {
+	color:"azul",
+	marca: "chevrolet",
+	modelo: "suri",
+	encendido: false,
+
+	arrancar:function(){
+		console.log("coche arrancar");
+		return this.encendido=true;
+	}
+
+}
+
+console.log(coche.color);
+console.log(coche.marca);
+console.log(coche.modelo);
+console.log(coche.encendido);
+console.log("----------");
+console.log(coche.arrancar());
+
+*/
+/*
+var concat = "Se llama concatenación a la unión de dos cadenas de caracteres a través del operador +";
+
+for(var i=0;i<concat.length;i++){
+	console.log(concat[i]);
+}*/
+
+/*
+var pregunta = prompt("Introducir javascript");
+
+var ver = pregunta.length;
+
+var mayusculas = pregunta.toUpperCase();
+
+var minusculas = pregunta.toLowerCase();
+
+console.log("La palabra javascript tiene " +ver);
+
+console.log("La palabra en mayusculas es " + mayusculas);
+
+console.log("La palabra en minusculas es " + minusculas);
+*/
+
+
+
+/*var cadenaUsuario = prompt("Introducir una cadena");
+
+function contarVocales(cadena){
+	var vocales = 0;
+	var cadena = cadena;
+
+	for (var i = 0; i<cadena.length;i++){
+		if (cadena[i]==="a"||cadena[i]==="e"||cadena[i]==="i" ||cadena[i]==="o" || cadena[i]==="u" ){
+			vocales +=1;
+		}
+	}
+	return "La palabra " + cadena + " contiene " + vocales + " vocales";
+}
+
+console.log(contarVocales(cadenaUsuario));
+
+var mayusculas = cadenaUsuario.toUpperCase();
+
+console.log(mayusculas);
+
+ function vocalesAtras (cadena){
+ 	var palabraInvertida = "";
+
+ 	for(var i = cadena.length-1;i>=0;i--){
+ 		palabraInvertida+=cadena[i];
+ 	}
+ 	return palabraInvertida;
+ }
+
+ console.log(vocalesAtras(cadenaUsuario));
+*/
+
+
+
+/**************************************************
+var Personaje = {
+
+	initPersonaje: function (nombre,vida,fuerza){
+		this.nombre = nombre;
+		this.vida = vida;
+		this.fuerza = fuerza;
+	},
+
+
+	atacar: function(objetivo){
+		if(this.vida>0){
+			var golpe = this.fuerza;
+			console.log(this.nombre + " ataca a " + objetivo.nombre + " produciendole un daño de " + golpe + " puntos");
+
+			objetivo.vida = objetivo.vida - golpe;
+			if (objetivo.vida > 0) {
+				console.log(objetivo.nombre + " tiene todavia " + objetivo.vida + " puntos de vida");
+			}else {
+				objetivo.vida = 0;
+				console.log(objetivo.nombre + " ha muerto");
+			}
+		}else {
+			console.log(this.nombre + " no pudede atacar: esta muerto");
+		}
+	}
+};
+
+var Jugador = Object.create(Personaje);
+
+Jugador.initJugador = function (nombre,vida,fuerza) {
+	this.initPersonaje(nombre,vida,fuerza);
+	this.xp = 0;
+};
+
+Jugador.describir = function (){
+	var descripcion = this.nombre + " tiene "+this.vida + " puntos de vida, " + this.fuerza + " de fuerza y " + this.xp + " de experiencia";
+	return descripcion;
+};
+
+Jugador.combatir = function (adversario){
+	this.atacar(adversario);
+	if (adversario.vida === 0 ){
+		console.log (this.nombre + " ha matado " + adversario.nombre + " y gana " + adversario.cantidadXp + " puntos de experiencia");
+		this.xp+=adversario.cantidadXp;
+	}
+};
+
+var Enemigo = Object.create(Personaje);
+
+Enemigo.initEnemigo = function (nombre,vida,fuerza,raza,cantidadXp){
+	this.initPersonaje(nombre,vida,fuerza);
+
+	this.raza = raza;
+	this.cantidadXp = cantidadXp;
+};
+
+var jugador1 = Object.create(Jugador);
+jugador1.initJugador("Heroe",150,25);
+
+var jugador2 = Object.create(Jugador);
+jugador2.initJugador("Mago",130,35);
+
+console.log(jugador1.describir());
+console.log("------+++++--------");
+console.log(jugador2.describir());
+console.log("------+++++--------");
+
+var monstruo = Object.create(Enemigo);
+monstruo.initEnemigo("ZogZog",40,20,"orco",10);
+
+console.log(monstruo.nombre + " un " + monstruo.raza + ", aparece de repente ");
+
+monstruo.atacar(jugador1);
+monstruo.atacar(jugador2);
+
+console.log(jugador1.describir());
+console.log(jugador2.describir());
+
+***********************************************/
+
+
+/*
+var Perro = {
+	init: function(nombre,raza,talla){
+		this.nombre=nombre;
+		this.raza=raza;
+		this.talla=talla;
+	},
+
+
+	ladrar: function(){
+
+		var ladrido = "!guau!";
+
+		if(this.talla<25){
+			ladrido = "buf buf";
+		}else  if (this.talla > 60 ){ 
+		 ladrido = "GRRRRRRRRR";
+	}
+	return ladrido;
+}
+};
+
+var peluca = Object.create(Perro);
+peluca.init("Peluca","Pastor Aleman",100);
+console.log(peluca.nombre + " es un " + peluca.raza + " y mide " + peluca.talla + " cm");
+console.log("Mira un gato " + peluca.nombre + " ladra: "+ peluca.ladrar());
+*/
+/*
+function createNewPerson (name){
+	var obj = {};
+	obj.name = name;
+	obj.greeting = function(){
+		alert("Hola "+ this.name );
+	};
+	return obj;
+}
+*/
+/***********************************************EJERCICIOS PIOLAS *****************************************/
+
+
+/*
+var today = new Date();
+var day = today.getDay();
+var dayList = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
+console.log("Hoy es " + dayList[day]);
+var hour =  today.getHours();
+var minute = today.getMinutes();
+var second= today.getSeconds();
+
+var prepand = (hour >= 12)? " PM " : " AM ";   //operador ternario, consta de dos valores, el primero true el segunde false.
+hour = (hour >= 12)? hour - 12 : hour;
+if (hour === 0 && prepand===" PM "){
+	if (minute===0 && second===0){
+		hour=12;
+		prepand="Noon";
+	}
+	else {
+		hour=12;
+		prepand=" PM ";
+	}
+}
+if (hour===0 && prepand=== " AM "){
+	if (minute===0 && second=== 0){
+		hour=12;
+		prepand= " Midnight";
+	}
+	else {
+		hour=12;
+		prepand= " AM ";
+	}
+}
+
+console.log("Current time: "+hour+prepand+ " : " + minute + " : " + second);
+*/
+
+/************ estos es para IMPRIMIR
+function ventana (){
+	print();
+}
+*/
+
+/*********************************Multiplicar y dividir*****************/
+/*function multiplicar(){
+
+
+	var uno = document.getElementById('numero1').value;
+	var dos = document.getElementById('numero2').value;
+
+
+	document.getElementById('resultado').innerHTML = (uno * dos);
+};
+
+function dividir(){
+
+
+	var uno = document.getElementById('numero1').value;
+	var dos = document.getElementById('numero2').value;
+
+
+	document.getElementById('resultado').innerHTML = (uno / dos);
+};
+
+dividir();
+multiplicar();*/
+
+
+/*****************************TRIPLE**************************/
+/*
+var uno = parseInt(prompt("Ingresa un numero"));
+var dos = parseInt(prompt("Ingresa un numero"));
+
+
+if (dos!=uno){
+	document.write(dos + uno);
+}else{
+	document.write(dos + uno * 3);
+}
+
+*/
+/*
+function cadena (ve){
+	if(ve=="Java"){
+		console.log("Perfecto");
+	}else console.log(false);
+}
+
+
+cadena("Java");
+*/
+/*
+function dados (uno,dos,tres){
+	if(uno>=20 && dos<tres){
+		console.log(true);
+	}else {
+		console.log(false);
+	}
+}
+
+
+dados(20,30,40);
+*/
+
+
+
+
+
+
+
+
+
+	</script>
+<!--
+1st Number <input type="text" name="numero1" placeholder="Pone un numero" id="numero1">
+<br>
+<br>
+<br>
+2nd Number <input type="text" name="numero2" placeholder="Pone un numero" id="numero2">
+<br>
+<br>
+
+<button onclick="multiplicar()">Multiplicar</button>
+
+<button onclick="dividir()">Dividir</button>
+
+<H3>El resultado es:</H3>
+<span id=resultado></span>-->
+
+
+</body>
+</html>
